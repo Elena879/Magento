@@ -119,7 +119,7 @@
 
     Options +FollowSymLinks
     RewriteEngine on
-
+    
 SetEnvIf Host .*elena-zabolotnaya.local.* MAGE_RUN_CODE=base
 SetEnvIf Host .*elena-zabolotnaya.local.* MAGE_RUN_TYPE=website
 
