@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert elena-zabolotnaya.local www.elena-zabolotnaya.local
+# $ mkcert elena-zabolotnaya.local www.elena-zabolotnaya.local elena-zabolotnaya-additional.local www.elena-zabolotnaya-additional.local
 #
 # Start composition:
 # $ docker-compose up -d
@@ -27,33 +27,33 @@ services:
     labels:
       - traefik.enable=true
       # HTTP
-      - traefik.http.routers.elena-zabolotnaya-local-http.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`)
+      - traefik.http.routers.elena-zabolotnaya-local-http.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`,`elena-zabolotnaya-additional.local`,`www.elena-zabolotnaya-additional.local`)
       - traefik.http.routers.elena-zabolotnaya-local-http.entrypoints=http
       - traefik.http.routers.elena-zabolotnaya-local-http.service=elena-zabolotnaya-local-http
       - traefik.http.services.elena-zabolotnaya-local-http.loadbalancer.server.port=80
       - traefik.http.services.elena-zabolotnaya-local-http.loadbalancer.server.scheme=http
       # HTTPS
-      - traefik.http.routers.elena-zabolotnaya-local-https.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`)
+      - traefik.http.routers.elena-zabolotnaya-local-https.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`,`elena-zabolotnaya-additional.local`,`www.elena-zabolotnaya-additional.local`)
       - traefik.http.routers.elena-zabolotnaya-local-https.entrypoints=https
       - traefik.http.routers.elena-zabolotnaya-local-https.tls=true
       - traefik.http.routers.elena-zabolotnaya-local-https.service=elena-zabolotnaya-local-https
       - traefik.http.services.elena-zabolotnaya-local-https.loadbalancer.server.port=443
       - traefik.http.services.elena-zabolotnaya-local-https.loadbalancer.server.scheme=https
       # Develop with extension that allows setting livereload host and port - https://github.com/lokcito/livereload-extensions
-      - traefik.http.routers.elena-zabolotnaya-local-livereload-https.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`)
+      - traefik.http.routers.elena-zabolotnaya-local-livereload-https.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`,`elena-zabolotnaya-additional.local`,`www.elena-zabolotnaya-additional.local`)
       - traefik.http.routers.elena-zabolotnaya-local-livereload-https.entrypoints=livereload-https
       - traefik.http.routers.elena-zabolotnaya-local-livereload-https.tls=true
       - traefik.http.routers.elena-zabolotnaya-local-livereload-https.service=elena-zabolotnaya-local-livereload-https
       - traefik.http.services.elena-zabolotnaya-local-livereload-https.loadbalancer.server.port=35729
       - traefik.http.services.elena-zabolotnaya-local-livereload-https.loadbalancer.server.scheme=http
-      - traefik.http.routers.elena-zabolotnaya-local-livereload-http.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`)
+      - traefik.http.routers.elena-zabolotnaya-local-livereload-http.rule=Host(`elena-zabolotnaya.local`,`www.elena-zabolotnaya.local`,`elena-zabolotnaya-additional.local`,`www.elena-zabolotnaya-additional.local`)
       - traefik.http.routers.elena-zabolotnaya-local-livereload-http.entrypoints=livereload-http
       - traefik.http.routers.elena-zabolotnaya-local-livereload-http.service=elena-zabolotnaya-local-livereload-http
       - traefik.http.services.elena-zabolotnaya-local-livereload-http.loadbalancer.server.port=35729
       - traefik.http.services.elena-zabolotnaya-local-livereload-http.loadbalancer.server.scheme=http
     # Must add extra_hosts to be written to /etc/hosts - otherwise containerized application can not curl itself
     extra_hosts:
-      - "elena-zabolotnaya.local www.elena-zabolotnaya.local:127.0.0.1"
+      - "elena-zabolotnaya.local www.elena-zabolotnaya.local elena-zabolotnaya-additional.local www.elena-zabolotnaya-additional.local:127.0.0.1"
       # Required for xDebug on Linux hosts till docker.host.internal is not available by default - https://github.com/docker/libnetwork/pull/2348/files
       - "host.docker.internal:172.17.0.1"
     links:
