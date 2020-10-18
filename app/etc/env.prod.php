@@ -76,5 +76,41 @@ return [
     ],
     'install' => [
         'date' => 'Sun, 11 Oct 2020 09:16:20 +0000'
+    ],
+    'system' => [
+        'default' => [
+            'web' => [
+                'unsecure' => [
+                    'base_url' => 'https://elena-zabolotnaya.local/',
+                    'base_link_url' => '{{unsecure_base_url}}',
+                    'base_static_url' => 'https://elena-zabolotnaya.local/static/',
+                    'base_media_url' => 'https://elena-zabolotnaya.local/media/'
+                ],
+                'secure' => [
+                    'base_url' => 'https://elena-zabolotnaya.local/',
+                    'base_link_url' => '{{secure_base_url}}',
+                    'base_static_url' => 'https://elena-zabolotnaya.local/static/',
+                    'base_media_url' => 'https://elena-zabolotnaya.local/media/'
+                ],
+            ],
+        ],
+        'websites' => [
+            'additional_website' => [
+                'web' => [
+                    'unsecure' => [
+                        'base_url' => 'https://elena-zabolotnaya-additional.local/',
+                        'base_link_url' => 'https://elena-zabolotnaya-additional.local/',
+                        'base_static_url' => 'https://elena-zabolotnaya-additional.local/static/',
+                        'base_media_url' => 'https://elena-zabolotnaya-additional.local/media/'
+                    ],
+                    'secure' => [
+                        'base_url' => 'https://elena-zabolotnaya-additional.local/',
+                        'base_link_url' => 'https://elena-zabolotnaya-additional.local/',
+                        'base_static_url' => 'https://elena-zabolotnaya-additional.local/static/',
+                        'base_media_url' => 'https://elena-zabolotnaya-additional.local/media/'
+                    ]
+                ]
+            ]
+        ]
     ]
 ];
