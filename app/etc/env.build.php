@@ -14,9 +14,9 @@ return [
         'connection' => [
             'default' => [
                 'host' => 'mysql',
-                'dbname' => 'elena_zabolotnaya_local',
-                'username' => 'elena_zabolotnaya_local',
-                'password' => 'elena_zabolotnaya_local',
+                'dbname' => 'elena_zabolotnaya_build_local',
+                'username' => 'elena_zabolotnaya_build_local',
+                'password' => '&^%&gfyFuyhguiygu&^',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
                 'initStatements' => 'SET NAMES utf8;',
@@ -72,7 +72,7 @@ return [
         'vertex' => 1
     ],
     'downloadable_domains' => [
-        'elena-zabolotnaya.local'
+        'elena-zabolotnaya-dev.local'
     ],
     'install' => [
         'date' => 'Sun, 11 Oct 2020 09:16:20 +0000'
@@ -81,33 +81,33 @@ return [
         'default' => [
             'web' => [
                 'unsecure' => [
-                    'base_url' => 'https://elena-zabolotnaya.local/',
+                    'base_url' => 'https://elena-zabolotnaya-dev.local/',
                     'base_link_url' => '{{unsecure_base_url}}',
-                    'base_static_url' => 'https://elena-zabolotnaya.local/static/',
-                    'base_media_url' => 'https://elena-zabolotnaya.local/media/'
+                    'base_static_url' => 'https://elena-zabolotnaya-dev.local/static/',
+                    'base_media_url' => 'https://elena-zabolotnaya-dev.local/media/'
                 ],
                 'secure' => [
-                    'base_url' => 'https://elena-zabolotnaya.local/',
+                    'base_url' => 'https://elena-zabolotnaya-dev.local/',
                     'base_link_url' => '{{secure_base_url}}',
-                    'base_static_url' => 'https://elena-zabolotnaya.local/static/',
-                    'base_media_url' => 'https://elena-zabolotnaya.local/media/'
-                ]
-            ]
+                    'base_static_url' => 'https://elena-zabolotnaya-dev.local/static/',
+                    'base_media_url' => 'https://elena-zabolotnaya-dev.local/media/'
+                ],
+            ],
         ],
         'websites' => [
             'additional_website' => [
                 'web' => [
                     'unsecure' => [
-                        'base_url' => 'https://elena-zabolotnaya-additional.local/',
-                        'base_link_url' => 'https://elena-zabolotnaya-additional.local/',
-                        'base_static_url' => 'https://elena-zabolotnaya-additional.local/static/',
-                        'base_media_url' => 'https://elena-zabolotnaya-additional.local/media/'
+                        'base_url' => 'https://elena-zabolotnaya-additional-dev.local/',
+                        'base_link_url' => 'https://elena-zabolotnaya-additional-dev.local/',
+                        'base_static_url' => 'https://elena-zabolotnaya-additional-dev.local/static/',
+                        'base_media_url' => 'https://elena-zabolotnaya-additional-dev.local/media/'
                     ],
                     'secure' => [
-                        'base_url' => 'https://elena-zabolotnaya-additional.local/',
-                        'base_link_url' => 'https://elena-zabolotnaya-additional.local/',
-                        'base_static_url' => 'https://elena-zabolotnaya-additional.local/static/',
-                        'base_media_url' => 'https://elena-zabolotnaya-additional.local/media/'
+                        'base_url' => 'https://elena-zabolotnaya-additional-dev.local/',
+                        'base_link_url' => 'https://elena-zabolotnaya-additional-dev.local/',
+                        'base_static_url' => 'https://elena-zabolotnaya-additional-dev.local/static/',
+                        'base_media_url' => 'https://elena-zabolotnaya-additional-dev.local/media/'
                     ]
                 ]
             ]
