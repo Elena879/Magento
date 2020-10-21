@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert elena-zabolotnaya.local www.elena-zabolotnaya.local elena-zabolotnaya-additional.local www.elena-zabolotnaya-additional.local
+# $ mkcert elena-zabolotnaya.local www.elena-zabolotnaya.local elena-zabolotnaya-additional.local www.elena-zabolotnaya-additional.local elena-zabolotnaya-dev.local www.elena-zabolotnaya-dev.local elena-zabolotnaya-additional-dev.local www.elena-zabolotnaya-additional-dev.local
 #
 # Start composition:
 # $ docker-compose up -d
