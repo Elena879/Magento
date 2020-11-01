@@ -54,7 +54,7 @@ Less compilation via Grunt is extremely important during development. It can be 
 8) $ # by adding `outputSourceFiles: true` to the `lessOptions.options` object
 9) $ grunt clean:theme && grunt exec:theme && grunt less:theme && grunt watch
 
-###Theme configuration example for Grunt ###
+### Theme configuration example for Grunt ###
 
 
 ```bash
