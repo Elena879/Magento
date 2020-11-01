@@ -1,10 +1,10 @@
 /**
- * grunt exec:dvcampus_luma_en_us && grunt less:dvcampus_luma_en_us
+ * grunt exec:lena_luma_en_us && grunt less:lena_luma_en_us && grunt watch
  */
 module.exports = {
-    dvcampus_luma_en_us: {
+    lena_luma_en_us: {
         area: 'frontend',
-        name: 'DVCampus/luma',
+        name: 'Lena/luma',
         locale: 'en_US',
         files: [
             'css/styles-m',
