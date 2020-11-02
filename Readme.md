@@ -40,3 +40,35 @@ Deployment process flow implemented in the above files:
 7) switch to the production mode;
 8) turn off maintenance (only for `deploy-full.sh`).
 
+###  Compile LESS using Grunt ###
+
+Less compilation via Grunt is extremely important during development. It can be set up in a few simple steps:
+
+1) $ cp package.json.sample package.json
+2) $ cp Gruntfile.js.sample Gruntfile.js
+3) $ cp grunt-config.json.sample grunt-config.json
+4) $ # Create theme configuration in `dev/tools/grunt/configs/local-themes.js`
+5) $ docker exec -it firstname-lastname.local-dev bash
+6) $ npm install
+7) $ # Modify the `dev/tools/grunt/configs/less.js` to get source maps working with Docker
+8) $ # by adding `outputSourceFiles: true` to the `lessOptions.options` object
+9) $ grunt clean:theme && grunt exec:theme && grunt less:theme && grunt watch
+
+### Theme configuration example for Grunt ###
+
+
+```bash
+#grunt exec:dvcampus_luma_en_US && grunt less:dvcampus_luma_en_US && grunt watch
+module.exports = {
+    dvcampus_luma_en_US: {
+        area: 'frontend',
+        name: 'DvCampus/luma',
+        locale: 'en_US',
+        files: [
+        'css/styles-m',
+        'css/styles-l'
+        ],
+    dsl: 'less'
+    }
+};
+```
