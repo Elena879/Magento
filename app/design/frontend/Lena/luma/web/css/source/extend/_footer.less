@@ -1,0 +1,17 @@
+& when (@media-common = true) {
+    .copyright {
+        background-color: @color-blue3;
+    }
+    .page-footer {
+        background-color: @color-sky-blue1;
+    }
+    .footer.content .links > li {
+        background-color: @color-sky-blue1;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-footer {
+        background-color: @color-sky-blue1;
+    }
+}
