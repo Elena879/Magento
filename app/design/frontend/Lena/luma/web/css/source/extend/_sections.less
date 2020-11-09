@@ -1,13 +1,15 @@
 & when (@media-common = true) {
-    .product.data.items > .item.title {
-        &:not(.disabled) > .switch:focus, &:not(.disabled) > .switch:hover {
+    .product.data.items > .item.title:not(.disabled) > .switch {
+        &:focus,
+        &:hover {
             background-color: @color-sky-blue1;
             color: @color-white;
         }
         &.active > .switch {
             background-color: @color-sky-blue1;
             color: @color-white;
-            &:focus,&:hover {
+            &:focus,
+            &:hover {
                 background-color: @color-sky-blue1;
                 color: @color-white;
             }
@@ -23,15 +25,17 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .product.data.items > .item.title {
-        &:not(.disabled) > .switch:focus, &:not(.disabled) > .switch:hover {
+    .product.data.items > .item.title:not(.disabled) > .switch {
+        &:focus,
+        &:hover {
             background-color: @color-sky-blue1;
             color: @color-white;
         }
         &.active > .switch {
             background-color: @color-sky-blue1;
             color: @color-white;
-            &:focus,&:hover {
+            &:focus,
+            &:hover {
                 background-color: @color-sky-blue1;
                 color: @color-white;
             }
