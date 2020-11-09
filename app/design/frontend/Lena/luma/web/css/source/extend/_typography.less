@@ -1,67 +1,87 @@
 & when (@media-common = true) {
-    //.header.panel > .header.links > li > a:visited {
-    //    color: @color-orange-red1;
-    //}
-    .nav-sections-items a:visited, .alink:visited {
-        color: @color-white;
+    .nav-sections-items {
+        a {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited {
+                color: @color-white;
+            }
+        }
+        .alink {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited {
+                color: @color-white;
+            }
+        }
+
     }
-    .nav-sections-items a, .alink {
-        color: @color-white;
-        font-weight: @font-weight__bold;
-    }
-    a:visited, .alink:visited {
+    a {
         color: @color-orange-red1;
+        &:visited, &:hover{
+            color: @color-orange-red1;
+        }
     }
-    a, .alink {
+    .alink {
         color: @color-orange-red1;
+        &:visited,  &:hover {
+            color: @color-orange-red1;
+        }
     }
-    a:hover, .alink:hover {
+    .product-item-name > a {
         color: @color-orange-red1;
+        &:visited, &:hover{
+            color: @color-orange-red1;
+        }
     }
-    .product-item-name > a:visited, .product.name a > a:visited {
+    .product.name a > a {
         color: @color-orange-red1;
-    }
-    .product-item-name > a, .product.name a > a {
-        color: @color-orange-red1;
-    }
-    .product-item-name > a:hover, .product.name a > a:hover {
-        color: @color-orange-red1;
+        &:visited, &:hover {
+            color: @color-orange-red1;
+        }
     }
     .filter-options-content a {
         color: @color-orange-red1;
     }
-    .footer.content .links a {
-        color: @color-white;
-        font-weight: @font-weight__bold;
-    }
-    .footer.content .links a:visited {
-        color: @color-white;
-    }
-    .footer.content .links a:hover {
-        color: @color-white;
-    }
-    .footer.content .links strong {
-        color: @color-white;
-        font-weight: @font-weight__bold;
+    .footer.content .links {
+        a {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited,&:hover {
+                color: @color-white;
+            }
+        }
+        strong {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+        }
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .navigation .level0 .submenu a {
-        font-weight: @font-weight__regular;
+    .navigation {
+        .submenu:not(:first-child) ul > li a {
+            color: @color-orange-red1;
+        }
+        .level0 .submenu a {
+            font-weight: @font-weight__regular;
+            &:hover, &.ui-state-focus {
+                color: @color-orange-red1;
+            }
+        }
     }
-    .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-focus {
-        color: @color-orange-red1;
+    .nav-sections-items {
+        .alink {
+            color: @color-orange-red1;
+            &:visited {
+                color: @color-orange-red1;
+            }
+        }
+        a {
+            color: @color-orange-red1;
+            &:visited {
+                color: @color-orange-red1;
+            }
+        }
     }
-    .navigation .submenu:not(:first-child) ul > li a {
-        color: @color-orange-red1;
-    }
-    .nav-sections-items a:visited, .alink:visited {
-        color: @color-orange-red1;
-    }
-    .nav-sections-items a, .alink {
-        color: @color-orange-red1;
-
-    }
-
 }
