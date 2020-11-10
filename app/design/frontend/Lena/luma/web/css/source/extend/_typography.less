@@ -1,0 +1,93 @@
+& when (@media-common = true) {
+    .nav-sections-items {
+        a {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited {
+                color: @color-white;
+            }
+        }
+        .alink {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited {
+                color: @color-white;
+            }
+        }
+    }
+    a {
+        color: @color-orange-red1;
+        &:visited,
+        &:hover {
+            color: @color-orange-red1;
+        }
+    }
+    .alink {
+        color: @color-orange-red1;
+        &:visited,
+        &:hover {
+            color: @color-orange-red1;
+        }
+    }
+    .product-item-name > a {
+        color: @color-orange-red1;
+        &:visited,
+        &:hover {
+            color: @color-orange-red1;
+        }
+    }
+    .product.name a > a {
+        color: @color-orange-red1;
+        &:visited,
+        &:hover {
+            color: @color-orange-red1;
+        }
+    }
+
+    .filter-options-content a {
+        color: @color-orange-red1;
+    }
+    .footer.content .links {
+        a {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+            &:visited,
+            &:hover {
+                color: @color-white;
+            }
+        }
+        strong {
+            color: @color-white;
+            font-weight: @font-weight__bold;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .navigation {
+        .submenu:not(:first-child) ul > li a {
+            color: @color-orange-red1;
+        }
+        .level0 .submenu a {
+            font-weight: @font-weight__regular;
+            &:hover,
+            &.ui-state-focus {
+                color: @color-orange-red1;
+            }
+        }
+    }
+    .nav-sections-items {
+        .alink {
+            color: @color-orange-red1;
+            &:visited {
+                color: @color-orange-red1;
+            }
+        }
+        a {
+            color: @color-orange-red1;
+            &:visited {
+                color: @color-orange-red1;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+& when (@media-common = true) {
+    .navigation .level0 {
+        > .level-top {
+            color: @color-white;
+            &:hover,
+            &.ui-state-focus {
+                color: @color-white;
+            }
+        }
+        &.active > .level-top,
+        &.has-active > .level-top {
+            color: @color-white;
+        }
+        .submenu a {
+            color: @color-white;
+            &:hover,
+            &.ui-state-focus {
+                color: @color-white;
+            }
+            .active > a {
+                color: @color-white;
+            }
+        }
+        &.active > a:not(.ui-state-active),
+        &.has-active > a:not(.ui-state-active) {
+            color: @color-white;
+        }
+    }
+    .navigation .submenu:not(:first-child) ul > li a {
+        color: @color-white;
+    }
+    .nav-sections-item-title .nav-sections-item-switch:hover {
+        color: @color-white;
+    }
+    .nav-sections .header.links {
+        li {
+            &.greet.welcome, > a {
+                color: @color-white;
+            }
+        }
+        a, a:hover{
+            color: @color-white;
+        }
+
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .navigation .level0 {
+        > .level-top, &.active > .level-top, &.has-active > .level-top, > .level-top:hover, > .level-top.ui-state-focus{
+            color: @color-white;
+        }
+        .submenu {
+            a {
+                color: @color-orange-red1;
+                &:hover, &.ui-state-focus {
+                    color: @color-orange-red1;
+                }
+            }
+            .active > a {
+                color: @color-orange-red1;
+            }
+        }
+    }
+}
