@@ -1,55 +1,49 @@
 & when (@media-common = true) {
-    .product.data.items > .item.title:not(.disabled) > .switch {
-        &:focus,
-        &:hover {
-            background-color: @color-sky-blue1;
-            color: @color-white;
-        }
-
-        &.active > .switch {
-            background-color: @color-sky-blue1;
-            color: @color-white;
-
-            &:focus,
-            &:hover {
+    .product.data.items > .item.title {
+        &:not(.disabled) > .switch {
+            &:focus,&:hover {
                 background-color: @color-sky-blue1;
                 color: @color-white;
             }
         }
-
-        > .switch {
-            background-color: @color-blue1;
+    }
+    .product.data.items > .item.title.active > .switch {
+        background-color: @color-sky-blue1;
+        color: @color-white;
+        &:focus,&:hover {
+            background-color: @color-sky-blue1;
             color: @color-white;
         }
     }
-
+    .product.data.items > .item.title > .switch {
+        background-color: @color-blue1;
+        color: @color-white;
+    }
     .data.switch .counter {
         color: @color-white;
     }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .product.data.items > .item.title:not(.disabled) > .switch {
-        &:focus,
-        &:hover {
-            background-color: @color-sky-blue1;
-            color: @color-white;
-        }
 
-        &.active > .switch {
-            background-color: @color-sky-blue1;
-            color: @color-white;
-
-            &:focus,
-            &:hover {
+    .product.data.items > .item.title {
+        &:not(.disabled) > .switch {
+            &:focus,&:hover {
                 background-color: @color-sky-blue1;
                 color: @color-white;
             }
         }
-
-        > .switch {
-            background-color: @color-blue1;
+    }
+    .product.data.items > .item.title.active > .switch {
+        background-color: @color-sky-blue1;
+        color: @color-white;
+        &:focus,&:hover {
+            background-color: @color-sky-blue1;
             color: @color-white;
         }
+    }
+    .product.data.items > .item.title > .switch {
+        background-color: @color-blue1;
+        color: @color-white;
     }
 }
