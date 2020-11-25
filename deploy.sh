@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH='lesson-5-less-and-rwd'
+BRANCH='lesson-7-blocks-and-templates'
 
 git checkout $BRANCH
 git merge origin/$BRANCH
