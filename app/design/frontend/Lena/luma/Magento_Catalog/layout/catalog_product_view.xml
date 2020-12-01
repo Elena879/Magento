@@ -2,5 +2,12 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <move element="product.info.extrahint" destination="page.main.title" before="-"/>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="product.info.block.demo"
+                   template="Magento_Catalog::product/view/block_demo.phtml"
+                   after="-">
+            </block>
+        </referenceContainer>
     </body>
 </page>

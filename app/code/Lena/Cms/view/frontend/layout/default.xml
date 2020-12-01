@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="div.sidebar.main" >
+            <block class="Magento\Cms\Block\Block" name="left-column-cms-block" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">left_column_content</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Cms\Block\Block" name="before-all-content-cms-block" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">before_all_content</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
