@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH='lesson-7-blocks-and-templates'
+BRANCH='lesson-8-controllers-and-routing'
 
 git checkout $BRANCH
 git merge origin/$BRANCH
