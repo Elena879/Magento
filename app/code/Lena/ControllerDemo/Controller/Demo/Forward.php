@@ -24,7 +24,8 @@ class Forward implements \Magento\Framework\App\Action\HttpGetActionInterface
     public function __construct(
         \Magento\Framework\App\RequestInterface $request,
         \Magento\Framework\Controller\Result\ForwardFactory $forwardResponseFactory
-    ) {
+    )
+    {
         $this->request = $request;
         $this->forwardResponseFactory = $forwardResponseFactory;
     }
@@ -36,10 +37,10 @@ class Forward implements \Magento\Framework\App\Action\HttpGetActionInterface
     {
         $forwardResponse = $this->forwardResponseFactory->create();
         return $forwardResponse->setParams([
-                'id'=>1,
-                'first_name' => 'Elena',
-                'last_name' => 'Zabolotnaya',
-                'repository' => 'https://github.com/Elena879/Magento'
+            'id' => 1,
+            'first_name' => 'Elena',
+            'last_name' => 'Zabolotnaya',
+            'repository' => 'https://github.com/Elena879/Magento'
         ])
             ->forward('data');
     }

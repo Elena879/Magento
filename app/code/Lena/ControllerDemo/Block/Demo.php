@@ -13,11 +13,17 @@ class Demo extends \Magento\Framework\View\Element\Template
         return (string)$this->getRequest()->getParam('first_name');
     }
 
+    /**
+     * @return string
+     */
     public function getLastNameParameter(): string
     {
         return (string)$this->getRequest()->getParam('last_name');
     }
 
+    /**
+     * @return string
+     */
     public function getRepositoryParameter(): string
     {
         return (string)$this->getRequest()->getParam('repository');
