@@ -311,6 +311,7 @@ return [
         'Lena_Cms' => 1,
         'Lena_ControllerDemo' => 1,
         'Lena_LayoutDebug' => 1,
+        'Lena_RegularCustomer' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
