@@ -1,0 +1,6 @@
+<?php /** @var \Lena\ControllerDemo\Block\Demo $block */ ?>
+<?php /** @var \Magento\Framework\Escaper $escaper */ ?>
+<p><?= $escaper->escapeHtml(__('Full name: %1 %2', $block->getFirstNameParameter(), $block->getLastNameParameter())) ?></p>
+<p><?= $escaper->escapeHtml(__('Repository URL: ')) ?><a
+        href="<?= $escaper->escapeUrl($block->getRepositoryParameter()) ?>"><?= $escaper->escapeHtml($block->getRepositoryParameter()) ?></a>
+</p>
