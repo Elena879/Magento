@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BRANCH='lesson-8-controllers-and-routing'
+BRANCH='lesson-10-jquery-widgets'
 
 git checkout $BRANCH
 git merge origin/$BRANCH
