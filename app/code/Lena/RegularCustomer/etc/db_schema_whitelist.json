@@ -1,0 +1,28 @@
+{
+    "lena_regular_customer_request": {
+        "column": {
+            "discount_request_id": true,
+            "customer_id": true,
+            "name": true,
+            "email": true,
+            "website_id": true,
+            "status": true,
+            "admin_user_id": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "LENA_REGULAR_CUSTOMER_REQUEST_CUSTOMER_ID": true,
+            "LENA_REGULAR_CUSTOMER_REQUEST_WEBSITE_ID": true,
+            "LENA_REGULAR_CUSTOMER_REQUEST_ADMIN_USER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "LENA_REGULAR_CUSTOMER_REQUEST_EMAIL_WEBSITE_ID": true,
+            "LENA_REGULAR_CSTR_REQUEST_CSTR_ID_M2_CSTR_ENTT_ENTT_ID": true,
+            "LENA_REGULAR_CSTR_REQUEST_WS_ID_M2_STORE_WS_WS_ID": true,
+            "LENA_REGULAR_CSTR_REQUEST_ADM_USR_ID_M2_ADM_USR_USR_ID": true
+        }
+
+    }
+}
